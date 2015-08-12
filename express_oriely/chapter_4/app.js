@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 var fortune = require('./lib/fortune.js')
 app.use(express.static(__dirname + '/public'));
+
 var handlebars = require('express-handlebars')
     .create({
         defaultLayout: 'main'
@@ -16,7 +17,10 @@ app.set('view engine', 'handlebars');
 // app.set('view engine', 'handlebars');
 // app.use(express.static('views'));
 // app.use(express.static('public'));
-
+app.use(function(req,res,next){
+    res.locals.showTests = app.get('env') !== 'production' && req.query.test === '1';
+    next();
+})
 
 app.set('port', process.env.PORT || 3000);
 
@@ -27,7 +31,8 @@ app.get('/', function(req, res) {
 });
 app.get('/about', function(req, res) {
     res.render('about', {
-        fortune: fortune.getFortune()
+        fortune: fortune.getFortune(),
+        pageTestScript: '/qa/tests-about.js'
     });
 });
 // 404 catch-all handler (middleware)
