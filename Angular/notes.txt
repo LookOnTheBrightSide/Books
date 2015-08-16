@@ -1,1 +1,5 @@
 ng -  directive
+directives grouping html and js fuctionality
+built in directives
+ngController
+ngModel
