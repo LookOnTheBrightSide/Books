@@ -1,0 +1,20 @@
+{
+  "name": "angularjs-for-test-driven-development",
+  "version": "0.0.0",
+  "homepage": "https://github.com/LookOnTheBrightSide/Books",
+  "authors": [
+    "lookOnTheBrightSide <nkosindlovu87@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "mocha": "~2.2.5",
+    "chai": "~3.2.0"
+  }
+}

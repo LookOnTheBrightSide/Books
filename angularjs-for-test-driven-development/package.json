@@ -1,0 +1,17 @@
+{
+  "name": "angularjs-for-test-driven-development",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.8.2",
+    "chai": "^3.2.0",
+    "gulp": "^3.9.0",
+    "mocha": "^2.2.5"
+  }
+}

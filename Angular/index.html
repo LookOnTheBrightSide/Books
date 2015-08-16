@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="directoryApp">
+<head>
+	<meta charset="UTF-8" />
+	<title>Angular</title>
+	 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+	 <script src="directory.js"> </script>
+</head>
+<body ng-controller="directoryController">
+	<input type="text" ng-model="yourName" placeholder="name" />
+	<input type="text" ng-model="search" />
+	<h2>{{yourName}}</h2>
+	<ul>
+		<li ng-repeat="item in list | filter:search"> {{item.num}} === {{item.score}} === {{item.len}}</li>
+	</ul>
+</body>
+</html>
