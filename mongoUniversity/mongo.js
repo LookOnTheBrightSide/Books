@@ -76,6 +76,19 @@ db.users.remove({score:{$lte:50}})
 //mongoimport -d course -c grades grades.json
 
 
+//$ query operator
+var query = { "grade": { "$gt":69, "$lt":80}};
+//get json database
+//curl https://www.reddit.com/r/webdev/.json > reddit.json
+
+
+db.reddit.find({title:{$regex: 'classified'}},{'title':1,'_id':0}).pretty()
+//sort limit skip
+
+
+db.collection('homeworks').findAndModify({}, [[ 'grade' , 1 ]], { '$set' : { 'dropped' : true } }, { 'new' : true }, callback);
+
+db.data.find({ "Wind Direction" : { $gte : 180, $lte : 360}}).sort({ Temperature : 1}).pretty()
 
 
 
