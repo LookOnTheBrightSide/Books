@@ -89,6 +89,17 @@ db.reddit.find({title:{$regex: 'classified'}},{'title':1,'_id':0}).pretty()
 db.collection('homeworks').findAndModify({}, [[ 'grade' , 1 ]], { '$set' : { 'dropped' : true } }, { 'new' : true }, callback);
 
 db.data.find({ "Wind Direction" : { $gte : 180, $lte : 360}}).sort({ Temperature : 1}).pretty()
+db.data.ensureIndex({'homeworks': 1})
+//join collections
+
+{
+  _id: 34,
+  name : "Snorkeling",
+  parent_id: 12,
+  ancestors: [12, 35, 90]
+}
+
+db.categories.find({ancestors:34})
 
 
 
