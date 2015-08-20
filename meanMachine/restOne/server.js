@@ -141,8 +141,8 @@ apiRouter.route('/users/:user_id')
 				return res.send(err);
 			}
 			res.json({message:"deleted Successfully"})
-		})
-	})
+		});
+	});
 
 // 	// get the user with that id
 // 	.get(function(req, res) {
