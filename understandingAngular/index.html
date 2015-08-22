@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Angular</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+  <script src="https://code.angularjs.org/1.4.4/angular-messages.min.js"></script>
+  <script src="https://code.angularjs.org/1.4.4/angular-resource.min.js"></script>
+</head>
+<body data-ng-app="myApp">
+  <h3>Hello World</h3>
+    <div class="container" data-ng-controller="mainController">
+      <ul>
+        <li>{{user.name}}</li>
+        <li>{{user.age}}</li>
+        <li>{{user.sex}}</li>
+      </ul>
+      <form name="myForm">
+  <label>
+    Enter your name:
+    <input type="text"
+           name="myName"
+           ng-model="name"
+           ng-minlength="5"
+           ng-maxlength="20"
+           required />
+  </label>
+  <pre>myForm.myName.$error = {{ myForm.myName.$error | json }}</pre>
+
+  <div ng-messages="myForm.myName.$error" style="color:maroon" role="alert">
+    <div ng-message="required">You did not enter a field</div>
+    <div ng-message="minlength">Your field is too short</div>
+    <div ng-message="maxlength">Your field is too long</div>
+  </div>
+</form>
+    </div><!-- /.container -->
+  
+  <script src="app.js"></script>
+</body>
+</html>
