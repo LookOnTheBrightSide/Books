@@ -31,10 +31,10 @@ app.controller('mainController', ['$scope', '$log', '$filter', '$resource', '$ti
         console.log($resource);
         console.log('the droids: ', $scope, $log);
         $log.error('this is an error');
-        $log.debug('this is an debug');
+        $log.debug('this is a debug');
         $log.info('this is an info');
-        $log.warn('this is an warn');
-        $log.log('this is an log');
+        $log.warn('this is a warn');
+        $log.log('this is a log');
 
         $scope.newDbEntry = '';
         $scope.addDbEntry = function(){
