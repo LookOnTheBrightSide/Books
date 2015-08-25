@@ -51,6 +51,11 @@ app.controller('mainController', ['$scope','myService', '$routeParams','$log', '
         $log.info(myService.name);
         $log.info(myService.nameLength());
 
+        // manual watching
+        // $scope.$watch('name', function(){
+        // 	myService.name = $scope.name;
+        // });
+
         $scope.user = andy;
         $scope.uppercaseUsername = $filter('uppercase')($scope.user.name);
         $log.warn($scope.uppercaseUsername);
