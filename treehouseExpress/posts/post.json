@@ -1,0 +1,20 @@
+{
+    "History of mars":{
+        "title": "Smithy",
+        "surname": "Coley",
+        "post": "lorem ipsum dolor",
+        "category": "fiction"
+    }, 
+    "Politics and money":{
+        "title": "Mit",
+        "surname": "Romney",
+        "post": "lorem ipsum dolor",
+        "category": "politics"
+    }, 
+    "Learn and master CSS":{
+        "title": "Sammy",
+        "surname": "Riley",
+        "post": "lorem ipsum dolor",
+        "category": "education"
+    }
+}
