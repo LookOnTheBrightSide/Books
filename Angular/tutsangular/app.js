@@ -1,6 +1,12 @@
 var app = angular.module('myApp', []);
 app.controller('MainController', ['$scope',
     function($scope) {
+        $scope.website = {
+            owner:"Etern Mistolo",
+            registrationDate:21,
+            registrationDay:"Monday",
+            registrationMonth:"August"
+        }
         $scope.workers = [{
             title: "Introduction to controllers in AngularJs",
             author: "Dale Watkins",
@@ -22,8 +28,19 @@ app.controller('MainController', ['$scope',
 
 app.directive('headingTop', function() {
     return {
-        restrict: 'E',
-        template: '<h2>{{worker.title}}</h2><h3>{{worker.author}}</h3><h5>{{worker.job}}</h5><h5>{{worker.company}}</h5>'
+        restrict: 'EAC ',
+        replace: true,
+        templateUrl: 'directives/headingtop.html',
+        scope: {
+            //@ text
+            //= two way binding, can pass object into the scope
+            workerTitle: "@",
+            workerAuthor: "@",
+            workerJob: "@",
+            workerCompany: "@",
+            website:"="
+
+        }
     }
 })
 //restrict takes the folowing

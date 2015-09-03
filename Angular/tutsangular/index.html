@@ -9,7 +9,7 @@
 <body ng-app="myApp">
 	<div class="conntainer" ng-controller="MainController">
 		<div class="wrap" ng-repeat="worker in workers">
-			<heading-top></heading-top>
+			<heading-top worker-title="{{worker.title}}" worker-author="{{worker.author}}" worker-job="{{worker.job}}" worker-company="{{worker.company}}" website="website"></heading-top>
 		</div><!-- /.wrap -->
 
 	</div><!-- /.conntainer -->
