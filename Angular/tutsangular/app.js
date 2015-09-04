@@ -34,6 +34,8 @@ app.directive('headingTop', function() {
         scope: {
             //@ text
             //= two way binding, can pass object into the scope
+            //& functions from scope
+            // link compile
             workerTitle: "@",
             workerAuthor: "@",
             workerJob: "@",

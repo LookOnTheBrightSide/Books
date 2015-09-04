@@ -1,0 +1,91 @@
+
+<div class="forecastPage">
+	<div class="row">
+		<div class="col-md-12">
+			<h2>Forecast for {{city}}</h2>
+		</div><!-- /.col-md-12 -->
+	</div><!-- /.row -->
+	<div class="row" >
+		<div class="col-md-12">
+			<table class="table">
+   <caption>Forecast for the next 2 days</caption>
+   <thead>
+      <tr>
+         <th>Rain</th>
+         <th>Temparature</th>
+         <th>Pressure</th>
+         <th>Humidity</th>
+      </tr>
+   </thead>
+   <tbody ng-repeat="weather in weatherResult.list">
+      <tr class="success">
+         <td>{{weather.rain}}</td>
+         <td>{{convertToCelcius(weather.temp.day)}}</td>
+         <td>{{weather.pressure}}</td>
+         <td>{{weather.humidity}}</td>
+      </tr>
+     <!-- <tr class="success">
+         <td>{{weather.rain}}</td>
+         <td>{{weather.rain}}</td>
+         <td>{{weather.rain}}</td>
+      </tr>
+      <tr  class="warning">
+         <td>{{weather.rain}}</td>
+         <td>{{weather.rain}}</td>
+         <td>{{weather.rain}}</td>
+      </tr>
+      <tr  class="danger">
+         <td>{{weather.rain}}</td>
+         <td>{{weather.rain}}</td>
+         <td>{{weather.rain}}</td>
+      </tr>-->
+   </tbody>
+</table>
+		</div><!-- /.col-md-6 -->
+	</div><!-- /.row -->
+	
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
