@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Bower Angular</title>
+	<meta charset="UTF-8" />
+    <link rel="stylesheet" href="/bower_components/angular-material/angular-material.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+	<!-- Scripts  -->
+	<script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-aria/angular-aria.js"></script>
+    <script src="/bower_components/angular-animate/angular-animate.js"></script>
+    <script src="/bower_components/angular-material/angular-material.js"></script>
+    <script src="src/app.js"></script>
+</head>
+<body ng-app="myApp">
+	<header ng-controller="MainController">
+		<md-toolbar><h3>Bower and Angular</h3></md-toolbar>
+		
+		<md-button class="md-primary">{{name}}</md-button>
+		
+	</header>
+	
+</body>
+</html>
