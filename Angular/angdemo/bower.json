@@ -1,0 +1,20 @@
+{
+  "name": "angdemo",
+  "version": "0.0.0",
+  "homepage": "https://github.com/LookOnTheBrightSide/Books",
+  "authors": [
+    "lookOnTheBrightSide <nkosindlovu87@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.5",
+    "bootstrap": "~3.3.5"
+  }
+}

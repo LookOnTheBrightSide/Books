@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8" />
+	<title>Bower</title>
+	<link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css" />
+	<link rel="stylesheet" href="/src/css/main.css" />
+	<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="/bower_components/angular/angular.min.js"></script>
+	<script src="/src/app.js"></script>
+</head>
+<body ng-controller="MainController">
+	<div class="container">
+		<div class="row">
+			<input type="text" class="col-md-3" ng-model="name"/>
+			<div class="col-md-3">Name</div><!-- /.col-md-6 -->
+			<div class="col-md-6">{{name}}</div><!-- /.col-md-6 -->
+		</div>
+		<div class="row" ng-repeat="employee in employees | filter:name | orderBy:age">
+			<div class="col-md-3">
+				<p>Name : {{employee.name}}</p>
+			</div><!-- /.col-md-3 -->
+			<div class="col-md-3">
+				<p>Profession : {{employee.profession}}</p>
+			</div><!-- /.col-md-3 -->
+			<div class="col-md-3">
+				<p>Race : {{employee.race}}</p>
+			</div><!-- /.col-md-3 -->
+			<div class="col-md-3">
+				<p>Age : {{employee.age}}</p>
+			</div><!-- /.col-md-3 -->
+		</div><!-- /.row -->
+	</div><!-- /.container -->
+	
+</body>
+</html>
