@@ -1,0 +1,10 @@
+.app-content{
+	width:100%;
+}
+form{
+	padding: .8em ;
+}
+
+md-input-group.long > input{
+	width: 100%;
+}

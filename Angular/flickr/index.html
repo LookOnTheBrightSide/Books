@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Flickr</title>
+	<link rel="stylesheet" href="main.css" />
+	<link rel="stylesheet" href="/bower_components/angular-material/angular-material.min.css" />
+	
+	<script src="/bower_components/angular/angular.min.js"></script>
+	<script src="/bower_components/angular-aria/angular-aria.min.js"></script>
+	<script src="/bower_components/angular-animate/angular-animate.min.js"></script>
+	<script src="/bower_components/hammerjs/hammer.min.js"></script>
+	<script src="/bower_components/angular-material/angular-material.min.js"></script>
+	<script src="app.js"></script>
+</head>
+<body ng-app="flickr" layout="column" layout-align="top center">
+	<div class="container" ng-controller="MainController">
+		<md-toolbar>
+			<div class="md-toolbar-tools">
+				<span class="md-flex">{{appName}}</span>
+			</div><!-- /.md-toolbar-tools -->
+		</md-toolbar>
+		<md-content layout="column" layout-align="center center">
+		   <div class="app-content" >
+		   	<form ng-submit="search()">
+		   		<input class="long" label="search for" ng-model="searchTerm"/>
+		   		<button >Submit</button>
+
+		
+		   	</form>
+		   	<md-card ng-repeat="picture in results.photos.photo">
+		   	 <img ng-src="https://farm{{picture.farm-id}}.staticflickr.com/{{picture.server-id}}/{{picture.id}}_{{picture.secret}}.jpg" class="md-card-image" alt="image caption">
+		   	 <md-card-content>
+		   	   <h2>{{picture.title}}</h2>
+		   	   <p>Card content</p>
+		   	 </md-card-content>
+		   	 <md-card-footer>
+		   	   Card footer
+		   	 </md-card-footer>
+		   	</md-card>
+		   </div><!-- /.app-content -->
+		</md-content>
+	</div><!-- /.container -->
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
