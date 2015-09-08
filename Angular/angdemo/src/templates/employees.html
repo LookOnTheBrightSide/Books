@@ -1,0 +1,19 @@
+<div class="row well customWell" ng-repeat="employee in employees | filter:name | orderBy:age">
+	<div class="col-md-3" >
+		<p>Name : {{employee.name}}</p>
+	</div>
+	<!-- /.col-md-3 -->
+	<div class="col-md-3">
+		<p>Profession : {{employee.profession}}</p>
+	</div>
+	<!-- /.col-md-3 -->
+	<div class="col-md-3">
+		<p>Race : {{employee.race}}</p>
+	</div>
+	<!-- /.col-md-3 -->
+	<div class="col-md-3">
+		<p>Age : {{employee.age}}</p>
+	</div>
+	<!-- /.col-md-3 -->
+</div>
+<!-- /.row -->

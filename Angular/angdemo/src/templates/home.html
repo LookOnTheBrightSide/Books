@@ -1,0 +1,60 @@
+<div class="row">
+	<div class="col-md-12">
+		<h2>Home</h2>
+		<p>Welcome to my home page</p>
+		<form class="form-horizontal">
+			<fieldset>
+
+				<!-- Form Name -->
+				<legend>Add new employee</legend>
+
+				<!-- Text input-->
+				<div class="form-group">
+					<label class="col-md-4 control-label" for="Name">Employee</label>
+					<div class="col-md-4">
+						<input id="Name" name="Name" ng-model="newEmployee.name"  type="text" placeholder="employee" class="form-control input-md" required="">
+						<span class="help-block">employee name</span>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-md-4 control-label" for="profession">Profession</label>
+					<div class="col-md-4">
+						<input id="profession" name="profession" ng-model="newEmployee.profession"  type="text" placeholder="placeholder" class="form-control input-md">
+						<span class="help-block">help</span>
+					</div>
+				</div>
+
+				<!-- Text input-->
+				<div class="form-group">
+					<label class="col-md-4 control-label" for="age">Age</label>
+					<div class="col-md-4">
+						<input id="age" name="age" ng-model="newEmployee.age"  type="text" placeholder="" class="form-control input-md" required="">
+						<span class="help-block">age</span>
+					</div>
+				</div>
+
+								<!-- Text input-->
+				<div class="form-group">
+					<label class="col-md-4 control-label" for="Race">Race</label>
+					<div class="col-md-4">
+						<input id="Race" name="Race" ng-model="newEmployee.race"  type="text" placeholder="race" class="form-control input-md">
+						<span class="help-block">black,white,mixed</span>
+					</div>
+				</div>
+				<!-- Text input-->
+
+
+				<!-- Button -->
+				<div class="form-group">
+					<label class="col-md-4 control-label" for="submit">Submit</label>
+					<div class="col-md-4">
+						<button id="submit" type="submit" ng-click="makeEmployee()" name="submit" class="btn btn-primary">Button</button>
+					</div>
+				</div>
+
+			</fieldset>
+		</form>
+	</div>
+	<!-- /.col-md-12 -->
+</div>
+<!-- /.row -->

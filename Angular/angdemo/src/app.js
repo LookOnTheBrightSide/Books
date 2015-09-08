@@ -1,4 +1,21 @@
-var app = angular.module('myApp', []);
+var app = angular.module('myApp', ['ngRoute']);
+//config
+app.config(function($routeProvider) {
+    $routeProvider
+        .when('/home', {
+            templateUrl: 'src/templates/home.html',
+            controller: 'MainController'
+        })
+        .when('/employees', {
+            templateUrl: 'src/templates/employees.html',
+            controller: 'MainController'
+        })
+        .when('/about', {
+            templateUrl: 'src/templates/about.html',
+            controller: 'MainController'
+        })
+})
+//controllers
 app.controller('MainController', ['$scope',
     function($scope) {
         var Person = function(name, profession, age, race) {
@@ -6,6 +23,15 @@ app.controller('MainController', ['$scope',
             this.profession = profession;
             this.age = age;
             this.race = race;
+        }
+        $scope.makeEmployee = function() {
+            //$scope.employees.push(new Person(name, profession, age, race));
+            $scope.employees.push({
+                name: $scope.newEployee.name,
+                profession: $scope.newEployee.profession,
+                age: $scope.newEployee.age,
+                race: $scope.newEployee.race
+            });
         }
         $scope.employees = [
             new Person("Ray", "Doctor", 47, "white"),
@@ -17,3 +43,6 @@ app.controller('MainController', ['$scope',
 
     }
 ])
+
+
+//console.log(app)
