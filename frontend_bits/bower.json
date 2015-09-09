@@ -1,0 +1,20 @@
+{
+  "name": "frontend_bits",
+  "version": "0.0.0",
+  "homepage": "https://github.com/LookOnTheBrightSide/Books",
+  "authors": [
+    "lookOnTheBrightSide <nkosindlovu87@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "normalize.css#~3.0.3",
+    "normalize-strings": "normalize#~1.0.4"
+  }
+}
