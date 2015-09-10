@@ -1,0 +1,4 @@
+//Tools
+Placehold.it = images
+Baseline.it = line height
+Typegenius.com/ = font pairing
