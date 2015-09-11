@@ -1,32 +1,89 @@
 //expression creates a value
 
+//this points to the containing object 
+//dynamic typing
 
+
+var longArray = [{
+        name: "Bob Mangena"
+    },
+    function(name) {
+        console.log("hello " + name)
+    },
+    false,
+    true,
+    [3, 4, 5]
+]
+console.log(longArray[1](longArray[0].name));
 var a = 2;
 var b = 3;
 var c = a * b;
 console.log(c);
 
-var Person = function(name,surname,age){
-	this.name = name;
-	this.surname = surname;
-	this.age = age;
+var Person1 = function(name, surname, age) {
+    this.name = name;
+    this.surname = surname;
+    this.age = age;
+    this.owner = function(newName, newAge) {
+        this.name = newName;
+        this.age = newAge;
+        console.log(this);
+
+        function setName(thisNewName) {
+            this.name = thisNewName;
+        }
+        setName("Deep Stevo")
+    }
 }
 
-var Joe = new Person("Joe","Doe",30)
-var Jane = new Person("Jane","Doe",38)
+//self
 
-var greet = function(person){
-	console.log("hello "+ person.name)
+var Person = function(name, surname, age) {
+    this.name = name;
+    this.surname = surname;
+    this.age = age;
+    this.owner = function(newName, newAge) {
+        var self = this;
+        self.name = newName;
+        self.age = newAge;
+
+        console.log(self);
+
+        function setName(thisNewName, thisNewAge) {
+            self.name = thisNewName;
+            self.age = thisNewAge;
+
+        }
+        setName("Deep Steve", 55);
+    }
 }
 
- 
+var boot = new Person("Dan", "White", 30)
+console.log(boot)
+
+//====
+
+var Joe = new Person("Joe", "Doe", 30)
+var Jane = new Person("Jane", "Doe", 38)
+
+var greet = function(person) {
+    console.log("hello " + person.name)
+}
+
+
 
 greet(Joe);
 greet(Jane);
 
-greet({name:"Rabbit"})
+greet({
+    name: "Rabbit"
+})
 JSON.stringify(Joe);
-var Sandra = JSON.stringify({"name": "Sandra","surname":"Bells","age":29});
+var Sandra = JSON.stringify({
+    "name": "Sandra",
+    "surname": "Bells",
+    "age": 29
+});
 
 console.log(JSON.parse(Sandra));
 
@@ -39,19 +96,19 @@ console.log(name);
 
 
 
-function hello(){
-	console.log("hello i am a computer!")
+function hello() {
+    console.log("hello i am a computer!")
 }
 hello.len = 44;
 console.log(hello.len);
 
 
-function logA(intro){
-	intro()
+function logA(intro) {
+    intro()
 }
 
-logA(function(){
-	console.log('hello witches');
+logA(function() {
+    console.log('hello witches');
 });
 logA(hello);
 
@@ -67,57 +124,15 @@ console.log(num2)
 var num1 = 10;
 var num2 = num1;
 console.log(num2)
-var Stevo = new Person("Stevo","Jones",33);
+var Stevo = new Person("Stevo", "Jones", 33);
 var Sam = Stevo;
 Sam.name = "Samuel";
-console.log(Sam);
-console.log(Stevo);
+// console.log(Sam);
+// console.log(Stevo);
 
+// (function version(){
+// 	this.process.version = 4.4;
+// 	console.log(this.process.version);
+// })();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Stevo.owner('Stevoooo function', 40);
