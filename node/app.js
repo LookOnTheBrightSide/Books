@@ -3,6 +3,30 @@
 //this points to the containing object 
 //dynamic typing
 
+//everytime a function is invoked js sets the context environment global environment arguments and this
+//call apply bind
+
+function sayHello(){
+
+	setTimeout(function(){
+		console.log("I am after 4 secs");
+	}, 4000)
+	console.log("I am in the settimeout")
+	setTimeout(function(){
+		console.log("hello world");
+	},2500);
+}
+sayHello();
+
+
+var countToTen = function(callback){
+	console.log("counting to ten");
+	callback();
+}
+
+countToTen(function(){
+	console.log("I am done with all my tasks!")
+})
 
 var longArray = [{
         name: "Bob Mangena"
@@ -54,10 +78,14 @@ var Person = function(name, surname, age) {
             self.age = thisNewAge;
 
         }
-        setName("Deep Steve", 55);
+        setName("Gus Los Polos", 55);
     }
 }
 
+var understood = new Person("Kompany","hispanic",90)
+console.log(understood)
+understood.owner("Pedro",45)
+//console.log(Kompany)
 var boot = new Person("Dan", "White", 30)
 console.log(boot)
 
@@ -136,3 +164,19 @@ Sam.name = "Samuel";
 // })();
 
 Stevo.owner('Stevoooo function', 40);
+
+
+
+
+function greetings(name,age,race){
+	race = race || "B"
+	console.log(name)
+	console.log(age)
+	console.log(race)
+	console.log(arguments)
+}
+
+
+
+
+greetings("sam",23)
