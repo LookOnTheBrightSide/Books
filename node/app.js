@@ -210,13 +210,76 @@ greetings("sam",23)
 // the most recent videos, or videos belonging to a certain genre or category.
 
 
+//The HTTP response structure mirrors that of the HTTP request. It contains:
+
+//
+//A response line, which includes the three-digit HTTP status code;
+
+//A header, which includes further information about the server and its response;
+
+//The body, which contains the text of the response.
+
+
 
 var xhr = new XMLHttpRequest();
 xhr.open("GET", "https://www.codecademy.com/", false);
-
 xhr.send();
 console.log(xhr.status);
 console.log(xhr.statusText);
+
+
+//console.log(xhr.open().arguments)
+
+
+
+//sooundclud demo sdk
+
+SC.initialize({
+  client_id: 'YOUR_CLIENT_ID'
+});
+
+$(document).ready(function() {
+  SC.get('/tracks', { genres: 'richie hawtin',year:2015 }, function(tracks) {
+   $(tracks).each(function(index, track) {
+     $('#results').append($('<li></li>').html(track.title + ' - ' + track.genre));
+    });
+  });
+});
+
+SC.initialize({
+  client_id: '340f063c670272fac27cfa67bffcafc4',
+  redirect_uri: 'http://external.codecademy.com/soundcloud.html'
+});
+
+$(document).ready(function() {
+  $('a.connect').click(function(e) {
+    e.preventDefault();
+    SC.connect(function(){
+            SC.get('/me',function(me){
+                    $('#username').html(me.username);
+                });
+        });
+  });
+});
+SC.initialize({
+  client_id: 'YOUR_CLIENT_ID'
+});
+
+$(document).ready(function() {
+    SC.get('/tracks/293',function(track){
+            $('#player').html(track.title);
+        });
+});
+
+SC.initialize({
+  client_id: 'YOUR_CLIENT_ID'
+});
+
+$(document).ready(function() {
+    SC.get('/tracks/293',function(track){
+           SC.oEmbed(track.permalink_url,document.getElementById('player'));
+        });
+});
 
 
 
