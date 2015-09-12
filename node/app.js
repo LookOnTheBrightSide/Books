@@ -180,3 +180,47 @@ function greetings(name,age,race){
 
 
 greetings("sam",23)
+
+//Access-Control-Allow-Origin
+
+// GET: retrieves information from the specified source 
+// POST: sends new information to the specified source.
+// PUT: updates existing information of the specified source.
+// DELETE: removes existing information from the specified source.
+
+
+
+// An HTTP request is made up of three parts:
+
+// The request line, which tells the server what kind of request is being sent 
+//    (GET, POST, etc.) and what resource it's looking for;
+// The header, which sends the server additional information 
+//    (such as which client is making the request)
+// The body, which can be empty (as in a GET request) 
+//     or contain data (if you're POSTing or PUTing information, 
+//     that information is contained here).
+
+
+
+var xhr = new XMLHttpRequest();
+xhr.open("GET", "https://www.codecademy.com/", false);
+
+xhr.send();
+console.log(xhr.status);
+console.log(xhr.statusText);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//========
