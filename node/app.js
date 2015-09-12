@@ -235,11 +235,13 @@ console.log(xhr.statusText);
 //sooundclud demo sdk
 
 SC.initialize({
-  client_id: 'YOUR_CLIENT_ID'
+	//==========
+  client_id: ''
+  //============
 });
 
 $(document).ready(function() {
-  SC.get('/tracks', { genres: 'richie hawtin',year:2015 }, function(tracks) {
+  SC.get('/tracks', { genres: 'black coffee',year:2015 }, function(tracks) {
    $(tracks).each(function(index, track) {
      $('#results').append($('<li></li>').html(track.title + ' - ' + track.genre));
     });
@@ -272,13 +274,32 @@ $(document).ready(function() {
 });
 
 SC.initialize({
+  	//==========
+  client_id: ''
+  //============
+});
+
+$(document).ready(function() {
+    SC.get('/tracks/294',function(track){
+           SC.oEmbed(track.permalink_url,document.getElementById('player'));
+        });
+});
+
+SC.initialize({
   client_id: 'YOUR_CLIENT_ID'
 });
 
 $(document).ready(function() {
-    SC.get('/tracks/293',function(track){
-           SC.oEmbed(track.permalink_url,document.getElementById('player'));
-        });
+SC.stream('/tracks/293', function(sound) {
+  $('#start').click(function(e) {
+    e.preventDefault();
+    sound.start();
+  });
+  $('#stop').click(function(e) {
+    e.preventDefault();
+    sound.stop();
+  });
+});
 });
 
 
