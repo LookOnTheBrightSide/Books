@@ -1,3 +1,5 @@
+//need to do some more codecademy jquey 
+
 //expression creates a value
 
 //this points to the containing object 
