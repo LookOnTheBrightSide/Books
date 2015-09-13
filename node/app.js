@@ -308,6 +308,14 @@ SC.stream('/tracks/293', function(sound) {
 
 
 
+$(document).ready(function() {
+    $('#notready').fadeOut(1000);
+});
+
+
+
+
+
 
 
 
