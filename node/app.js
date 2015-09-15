@@ -229,7 +229,10 @@ xhr.send();
 console.log(xhr.status);
 console.log(xhr.statusText);
 
-
+function owl(){
+	console.log('ooooo_ _ - - - _ _ooooo');
+}
+owl();
 //console.log(xhr.open().arguments)
 
 
@@ -310,6 +313,13 @@ SC.stream('/tracks/293', function(sound) {
 
 $(document).ready(function() {
     $('#notready').fadeOut(1000);
+});
+
+
+
+
+$(document).ready(function(){
+	$('body').append('<p>this is from jquery</p>');
 });
 
 
