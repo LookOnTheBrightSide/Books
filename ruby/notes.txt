@@ -1,0 +1,44 @@
+Interpreted, meaning you don't need a compiler to write and run Ruby. You can write it here at Codecademy or even on your own computer (many are shipped with the Ruby interpreter built in—we'll get to the interpreter later in this lesson).
+
+Object-oriented, meaning it allows users to manipulate data structures called objects in order to build and execute programs. We'll learn more about objects later, but for now, all you need to know is everything in Ruby is an object.
+
+'puts' and 'print'
+The print command just takes whatever you give it and prints it to the screen. puts (for "put string") is slightly different: it adds a new (blank) line after the thing you want it to print.
+
+Everything in Ruby is an Object
+Because everything in Ruby is an object (more on this later), everything in Ruby has certain built-in abilities called methods. You can think of methods as "skills" that certain objects have. For instance, strings (words or phrases) have built-in methods that can tell you the length of the string, reverse the string, and more.
+
+=begin
+I'm a comment!
+I don't need any # symbols.
+=end
+
+Naming Conventions
+There are many different kinds of variables you'll encounter as you progress through these courses, but right now we're just concerned with regular old local variables. By convention, these variables should start with a lowercase letter and words should be separated by underscores, like counter and masterful_method. Ruby won't stop you from starting your local variables with other symbols, such as capital letters, $s, or @s, but by convention these mean different things, so it's best to avoid confusion by doing what the Ruby community does.
+
+//get from user
+variable_name = gets.chomp
+
+
+
+
+print "What's your first name?"
+first_name.gets.chomp
+print "lastname?"
+last_name.gets.chomp
+print "city"
+city.gets.chomp
+print "state"
+state.gets.chomp
+
+
+string interpolation
+first_name = "Kevin"
+puts "Your name is #{first_name}!"
+
+If
+Ruby's if statement takes an expression
+if 1 < 2
+  print "I'm getting printed because one is less than two!"
+end
+
