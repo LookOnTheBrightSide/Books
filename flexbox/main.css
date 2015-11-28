@@ -1,27 +1,32 @@
-
-.box{
-	color: white;
-	font-size: 1em;
-	text-align: center;
-	text-shadow: .03em .03em 0 rgba(0,0,0,0.1);
-	padding: 3em;
-
+*{
+	font-size: 18px;
+	font-family: "Lato", "Roboto", sans-serif;
 }
-.box1{background: CadetBlue;}
-.box2{background: Bisque ;}
-.box3{background: Chocolate;}
-.box4{background: Coral ;}
-.box5{background: Cornsilk;}
-.box6{background: Cyan ;}
-.box7{background: DarkBlue;}
-.box8{background: DarkOrchid ;}
-.box9{background: tomato;}
-.box10{background: DeepPink ;}
 
 .container{
 	display: flex;
-	/*inline-flex option*/
-	border: .3em solid teal;
-	flex-direction: column;
-	min-height: 100vh;
+	background-color: lightblue;
+	flex-direction: row;
+	flex-wrap: wrap;
+	/*justify-content: space-around;*/
+}
+.box{
+	margin: 1rem;
+	color: white;
+	padding: 1rem;
+	background-color: rebeccapurple;
+	text-align: center;
+	flex-grow: 1;
+
+}
+.box4, .box5{
+	order: -1;
+}
+
+.box8{
+	order: 1;
+}
+
+.box10{
+	flex-grow: 2;
 }
