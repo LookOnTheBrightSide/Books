@@ -1,0 +1,43 @@
+*{
+	font-size: 18px;
+	font-family: "Roboto", "Lato", "Sans-serif";
+	text-align: center;
+	margin: 0;
+}
+.container{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	height: 500px;
+	/*align-items: center;*/
+	flex-flow: row;
+}
+
+.box{
+	padding: 1rem;
+	border: 1px solid rebeccapurple;
+	color: white;
+	margin: 20px;
+
+}
+
+.one{
+	/*flex: 4;*/
+	background-color: deepskyblue;
+	/*height: 100%;*/
+}
+
+.two{
+	/*flex: 2;*/
+	background-color: cadetblue;
+	/*height: 70%;*/
+
+}
+.three{
+	/*flex: 6;*/
+	background-color: hotpink;
+	/*height: 50%;*/
+	/*align-self: flex-start;*/
+	margin: auto;
+}

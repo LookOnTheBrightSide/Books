@@ -17,3 +17,31 @@ elsif user_num > 0
 else
   puts "You picked zero!"
 end
+
+
+
+
+hungry = false
+
+unless hungry
+  puts "I'm writing Ruby programs!"
+else
+  puts "Time to eat!"
+end
+
+fruits.each do |fruit|
+  puts fruit
+end
+
+
+#make own methods
+def pluralize(word)
+  word + "s"
+end
+pluralize("kiwi")
+
+
+
+
+
+

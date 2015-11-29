@@ -16,11 +16,12 @@
 	padding: 1rem;
 	background-color: rebeccapurple;
 	text-align: center;
-	flex-grow: 1;
+	flex-basis: 200px;
 
 }
 .box4, .box5{
 	order: -1;
+	flex-grow: 2;
 }
 
 .box8{
