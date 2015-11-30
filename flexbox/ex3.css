@@ -1,0 +1,21 @@
+*{
+	margin: 0;
+}
+body{
+	display:flex;
+	justify-content: space-between;
+	flex-flow: row;
+	flex-wrap: wrap;
+	align-items: flex-start;
+}
+
+.box{
+	background-color: teal;
+	padding: 20px;
+	height: 300px;
+	margin: 20px;
+}
+
+.box-last{
+	/*margin: auto;*/
+}

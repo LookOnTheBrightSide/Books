@@ -1,0 +1,19 @@
+*{
+	margin:0;
+}
+.container{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	height: 300px;
+	align-itmes: flex-end;
+}
+
+.box{
+	padding: 20px;
+	margin: 20px;
+	color: white;
+	border: 1px solid crimson;
+	background-color: rebeccapurple;
+}
