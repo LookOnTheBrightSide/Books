@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+}
+.box{
+    font-size: 14px;
+    background: firebrick;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; 
+    min-height: 400px; 
+    align-items: flex-end;
+}
+
+.item{
+    width: 280px;
+    padding: 1em;
+    flex: 1;
+    background: chocolate;
+    color: lime;
+    text-align: center;
+}
+
+.item1, .item3, .item5{
+    align-self: flex-start;
+    flex: 3;
+}
