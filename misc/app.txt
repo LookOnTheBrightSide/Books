@@ -1,0 +1,23 @@
+go to bluemix.net
+go to catalog
+scroll to service you would like to use
+generate credentials
+
+I am using curl here
+
+{
+  "credentials": {
+    "url": "https://stream.watsonplatform.net/speech-to-text/api",
+    "password": "your-long-pass",
+    "username": "your-long-username"
+  }
+}
+
+Accuracy was amazing!neat litle toy to play with!
+
+
+  curl -u "pass": "username" - X POST\
+  --header "Content-Type: audio/wav"\
+  --header "Transfer-Encoding: chunked"\
+  --data - binary@ "./speach.wav"\
+"https://stream.watsonplatform.net/speech-to-text/api/v1/recognize?continuous=true"
