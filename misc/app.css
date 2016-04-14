@@ -1,0 +1,13 @@
+#container{
+  min-height: 100vh;
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#value{
+  font-family: roboto;
+  font-size: 140%;
+  padding: 2rem;
+  background-color: 2px solid white;
+}
