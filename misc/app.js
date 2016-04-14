@@ -12,6 +12,23 @@ var factory = function(genre) {
 		}
 	}
 }
+function done(){
+	console.log("All done, let's move on ...");
+}
+
+function add(a,b,callback){
+	var  c = a + b;
+	console.log(c);
+	callback();
+}
+
+add(4,4, function(error){
+	if (error){
+		throw error;
+	}
+	console.log( "done adding now");
+});
+
 
 var dnb = factory("dnb");
 var techno = factory("techno");
