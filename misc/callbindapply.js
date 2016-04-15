@@ -1,15 +1,20 @@
 // for performance I think I should use the declaration. I am not sure though but
 // I think this just hoists Car and assigns it to undefined until it's actually used.
 var Car = function(make, year, color, mileage) {
-	this.make = make;
-	this.color = color;
-	this.year = year;
-	this.mileage = mileage;
-	this.description = function() {
-		return ("This is a " + this.color + " " + this.make + " from " + this.year);
+		this.make = make;
+		this.color = color;
+		this.year = year;
+		this.mileage = mileage;
 	}
+	// Wow, for performance I have just learnt that I can add the function to the
+	// prototype so I don't have to redo it when every object is created. This was a
+	// a bit tricky for me to understand but now description now sits in the prototype
+	// and not in the Car object... amazing hehe
+Car.prototype.description = function() {
+	return ("This is a " + this.color + " " + this.make + " from " + this.year);
 }
 
+};
 var getz = new Car("Hyundai", 2006, "White", 160000);
 // console.log(getz.description());
 
@@ -86,7 +91,7 @@ console.log(typeof a);
 document.getElementById("value").innerHTML = "rgba(" + [r, g, b, a] + ")";
 var color = "rgba(" + r + "," + g + "," + b + "," + a + ")";
 console.log(color);
-document.getElementById("container").style.backgroundColor = color
+document.getElementById("container").style.background = color
 
 
 
