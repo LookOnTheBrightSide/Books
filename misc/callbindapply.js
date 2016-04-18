@@ -14,9 +14,12 @@ Car.prototype.description = function() {
 	return ("This is a " + this.color + " " + this.make + " from " + this.year);
 }
 
-};
 var getz = new Car("Hyundai", 2006, "White", 160000);
-// console.log(getz.description());
+getz.radio = {}
+getz.radio.volume = 100;
+getz.radio.speakers = 4;
+getz.radio.hasRadio = true;
+console.log(getz);
 
 // this does not make any sense at all as I probably should add advert to the constructor
 // like below.
