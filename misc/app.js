@@ -1,4 +1,4 @@
-var factory = function(genre) {
+ var factory = function(genre) {
 	return function(name, song, composer) {
 		if (genre === "techno") {
 			return (name + " chose " + genre +
